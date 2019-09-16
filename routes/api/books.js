@@ -1,12 +1,26 @@
 const router = require("express").Router();
 const booksController = require("../../controllers/booksController");
 
-router.route("/")
-      .get(booksController.findAll)
-      .post(booksController.create);
+//call google books API to get books
+router.route("/googlebooks/:title")
+      .get(booksController.getGoogleBooks);
 
-router.route("/:id")
-      .get(booksController.findById)
-      .delete(booksController.remove);
+
+
+// return all saved books as JSON.      
+// router.route("/")      
+//       .get(booksController.findAll);
+
+// //save a new book to the database.
+// router.route("/")
+//       .post(booksController.create);
+      
+// //view a book from the database by Mongo `_id`.
+// router.route("/:id")
+//       .get(booksController.findById);
+
+// //delete a book from the database by Mongo `_id`.
+// router.route("/:id")      
+//       .delete(booksController.remove);
 
 module.exports = router;      

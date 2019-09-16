@@ -1,0 +1,25 @@
+.nav-bar li{
+    display:inline-block;
+}
+
+nav{
+    background-color: darkgray;
+}
+
+
+.link-button {
+    background-color: transparent;
+    color:palevioletred;
+    font-size:32px;
+    font-weight:1000;
+    border: none;
+    cursor: pointer;
+    display:inline;
+    margin:0;
+    padding:0;
+}
+
+.link-button:hover,
+.link-button:focus {
+    color:darksalmon;
+    }

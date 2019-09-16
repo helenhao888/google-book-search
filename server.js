@@ -6,12 +6,22 @@ const PORT = process.env.PORT || 3001;
 
 //define middleware
 app.use(express.urlencoded({extended: true}));
-app.use(express.json);
+app.use(express.json());
 
 //serve up static assets
 if(process.env.NODE_ENV === "production"){
     app.use(express.static("client/build"));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+} else{
+
+// set static folder
+    app.use(express.static('client/public'));
 }
+
+
 
 //add routes, both API and view
 app.use(routes);

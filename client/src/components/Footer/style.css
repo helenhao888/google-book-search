@@ -1,0 +1,17 @@
+.footer {
+    min-height: 60px;
+    background: darkseagreen;
+    position: relative;
+  }
+  
+  .footer span {
+    position: absolute;
+    text-align: center;
+    color:darkblue;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px;
+    background:lightslategray;
+  }
+  
