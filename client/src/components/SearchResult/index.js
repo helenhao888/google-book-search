@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react'
 import "./style.css";
 
-function SearchResult(props){
-
-    return(
+function SearchResult(props) {
+    return (
         <div>
-
+            
         </div>
     )
-};
+}
 
-export default SearchResult;
+export default searchResult;
+
 

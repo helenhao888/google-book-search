@@ -6,6 +6,7 @@ export default {
         
        console.log("get google book title",title);
        return axios.get("/api/books/googlebooks/"+title);
+            
     }
 
 };
