@@ -10,7 +10,8 @@ class Searchbooks extends Component{
     state={
         bookname:"",
         result:[],
-        error:""
+        error:"",
+        loadingflag:false
     };
 
     handleInputChange= (event)=>{
@@ -22,12 +23,13 @@ class Searchbooks extends Component{
     handleSearchFormSubmit =(event)=>{
 
         event.preventDefault();
+        this.setState({loadingflag:true});
         
         API.getGoogleBooks(this.state.bookname)
            .then(res=>{         
 
-               this.setState({result:res.data});
-               console.log("this state result",this.state.result);
+               this.setState({result:res.data,
+                              loadingflag:false});
                
            })
            .catch(err =>{
@@ -67,14 +69,19 @@ render(){
             />
 
 
-                {this.state.result ? (
-                 
-                  <SearchResult result={this.state.result} handleSaveBooks={this.handleSaveBooks} 
-                                 />
-                 ) 
-               : (
-                        <h3>No Results to Display</h3>
-                    )}           
+            {this.state.loadingflag ?
+                <p>Loading....</p>
+                :
+                <p></p>}
+
+            {this.state.result ? (
+
+                <SearchResult result={this.state.result} handleSaveBooks={this.handleSaveBooks}
+                />
+            )
+                : (
+                    <h3>No Results to Display</h3>
+                )}
 
         </div>
 

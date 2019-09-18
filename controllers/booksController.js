@@ -42,10 +42,13 @@ module.exports = {
     },
 
     remove: (req,res) => {
+      console.log("req.parmsid",req.params.id);
         db.Book
           .findById({_id: req.params.id})
           .then(dbModel => dbModel.remove())
           .then(dbModel => res.status(200).json(dbModel))
-          .catch(err => res.status(422).json(err));
+          .catch(err => 
+            { console.log("err",err);
+              res.status(422).json(err)});
     }
 };

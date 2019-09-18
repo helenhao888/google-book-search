@@ -35,17 +35,18 @@ class SavedBooks extends Component{
 
     handleDeleteBooks=(event)=>{
 
-       console.log("delete");
+       console.log("delete",event.target.id);
         
-        // API.deleteBooks(bookData)
-        // .then(res=>{         
+        API.deleteBooks(event.target.id)
+        .then(res=>{         
 
-        //     console.log("success", res);
+            console.log("success", res);
+            this.getBooks();
             
-        // })
-        // .catch(err =>{
-        //     console.log("save books err ", err);
-        // })
+        })
+        .catch(err =>{
+            console.log("delete books err ", err);
+        })
         
     }
 

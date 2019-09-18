@@ -15,18 +15,17 @@ function SavedBooksList(props){
                    <div className="card mb-3" >
                        <div className="row no-gutters">
                            <div className="col-md-3">
-                               <img src={book.image} className="card-img" alt="book phot" />
+                               <img src={book.image} className="card-img" alt="book photo" />
                            </div>
                            <div className="col-md-9">
                                <div className="card-body">
                                    <h5 className="card-title">{book.title}</h5>
                                    <p className="card-text"><small className="text-muted">{book.authors}</small></p>
                                    <p className="card-text">{book.description}</p>
-                                   <button><a href={book.previewLink} target="_blank">View</a></button>
+                                   <button><a href={book.link} target="_blank">View</a></button>
                               
                                    <button  onClick={props.handleDeleteBooks}                                           
-                                           id={book._id}
-                                           >Delete</button>
+                                           id={book._id}>Delete</button>
                                </div>
                            </div>
                        </div>

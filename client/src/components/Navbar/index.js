@@ -9,11 +9,13 @@ function Navbar() {
   return (
                      
       <nav className="navbar sticky-top ">
-          <Link className="navbar-nav" to="/">
-              <button type="button" className="link-button">
-                  Google Books
+          {/* <Link className="navbar-nav" to="/"> */}
+              <button type="button" className="link-button App-logo">
+                  <span>Google</span> 
+                  <span>Books</span>
+                 
                     </button>
-          </Link>     
+           
 
           <Link className="navbar-nav" to="/search">
               <button type="button" className="link-button">
