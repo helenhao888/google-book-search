@@ -28,7 +28,7 @@ app.use(routes);
 
 mongoose.set("useUnifiedTopology",true);
 //connect to mongo db
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/goolebooks",
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:heroku_xc2rlgsc@ds229450.mlab.com:29450/heroku_xc2rlgsc",
                   {useNewUrlParser :true});
 
 //start the API server
