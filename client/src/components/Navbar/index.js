@@ -27,13 +27,7 @@ function Navbar() {
                     </button>
           </Link>  
 
-          <a className="navbar-brand" href="/">
-        React Reading List
-      </a>
-          {/* <ul>
-              <li><i className="fa fa-search" aria-hidden="true">  Search</i></li>
-              <li><i className="fa fa-bookmark" aria-hidden="true">  Saved</i></li>
-          </ul> */}
+         
 
       </nav>
   );

@@ -16,10 +16,12 @@ module.exports = {
     findAll: (req,res) => {
       console.log("find all");
         db.Book
-          .find(req.query)
+          .find({})
           .sort({author:1})
-          .then( dbModel => res.status(200).jscon(dbModel))
-          .catch( err => res.status(422).json(err));
+          .then( dbModel => res.status(200).json(dbModel))
+          .catch( err => {
+            console.log("err",err);          
+            res.status(422).json(err)});
     },
     findById: (req,res) => {
         db.Book
@@ -29,10 +31,14 @@ module.exports = {
     },
 
     create: (req,res) =>{
+      console.log("create book",req.body)
         db.Book
           .create(req.body)
           .then(dbModel => res.status(200).json(dbModel))
-          .catch(err => res.status(422).json(err));
+          .catch(err => {
+            console.log("err",err);
+            res.status(422).json(err)}
+            );
     },
 
     remove: (req,res) => {

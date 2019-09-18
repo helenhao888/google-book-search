@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import SearchBooks from "./components/SearchBooks";
-import SavedBooks from "./components/SavedBooks"
+import SavedBooks from "./pages/SavedBooks";
 
 
 function App() {

@@ -2,17 +2,18 @@
     border:1rem;
     background: lightblue;
     text-align: left;
-    margin:10px;
+    padding:10px;
+    margin-top:5px;
 }
 
-button{
-    margin:10px;
+.btn{
+    margin-left:20px;
 }
 
 .search{
     margin:20px;
 }
 
-h2, button {
+h2 {
     margin-left:20px;
 }
