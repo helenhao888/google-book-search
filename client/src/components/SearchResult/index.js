@@ -9,21 +9,27 @@ function SearchResult(props) {
     return (
         <div className="container-fluid resultContainer">
             <List>
-                <h2>Results</h2>
+                <h4>Results</h4>
 
                 {props.result.map((book, index) => (
                    book.volumeInfo.title && book.volumeInfo.title ?                   
                    (<ListItem key={index}>
                         <div className="card mb-3" >
                             <div className="row no-gutters">
-                                <div className="col-md-3">
+                                <div className="col-md-4">
+                                    <h5 className="card-title">{book.volumeInfo.title}</h5>
+                                    <p className="card-text"><small className="text-muted">{book.volumeInfo.authors}</small></p>
                                     <img src={book.volumeInfo.imageLinks.smallThumbnail} className="card-img" alt="book image" />
+                                   
                                 </div>
-                                <div className="col-md-9">
+                                <div className="col-md-8">
                                     <div className="card-body">
-                                        <h5 className="card-title">{book.volumeInfo.title}</h5>
-                                        <p className="card-text"><small className="text-muted">{book.volumeInfo.authors}</small></p>
-                                        <p className="card-text">{book.volumeInfo.description}</p>
+                                        <p className="card-text card-desc">
+                                               {book.volumeInfo.description? 
+                                                    book.volumeInfo.description:
+                                                    "No description"
+                                                 }
+                                               </p>
                                         <button><a href={book.volumeInfo.previewLink} target="_blank">View</a></button>
                                     
                                         <button  onClick={props.handleSaveBooks} 

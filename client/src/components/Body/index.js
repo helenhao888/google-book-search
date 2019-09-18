@@ -5,7 +5,7 @@ import "./style.css";
 function Body(){
     return(
         <div className = "bodyContainer">            
-            <h1>(React) Google Books Search</h1>
+            <h3>(React) Google Books Search</h3>
             <p> Search for and Save books of Interest</p>
         </div>
     )
