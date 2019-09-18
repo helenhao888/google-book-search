@@ -13,7 +13,8 @@ class Searchbooks extends Component{
         errorflag:false,
         error:"",
         loadingflag:false,
-        displayflag:false
+        displayflag:false,
+        saveSuccess:false
     };
 
     handleInputChange = (event) => {
@@ -30,7 +31,10 @@ class Searchbooks extends Component{
         event.preventDefault();
         this.setState({
             errorflag: false,
-            error: ""
+            error: "",
+            displayflag:false,
+            result:"",
+            saveSuccess:false
         });
         this.setState({ loadingflag: true });
 
@@ -71,13 +75,9 @@ class Searchbooks extends Component{
         API.saveBooks(bookData)
         .then(res=>{         
 
+            this.setState({saveSuccess:true})
             console.log("success", res);
-            API.getBooks()
-               .then(res=>{
-                  console.log("get book successfully",res);
-                } )
-               .catch(err =>
-                  console.log("get book err",err));  
+           
             
         })
         .catch(err =>{
@@ -108,7 +108,8 @@ render(){
             {this.state.result.length !==0 ? (
 
                 <SearchResult result={this.state.result} 
-                              handleSaveBooks={this.handleSaveBooks} />
+                              handleSaveBooks={this.handleSaveBooks} 
+                              saveSuccess ={this.state.saveSuccess}/>
                 )
                 : ( 
                     this.state.displayflag ?

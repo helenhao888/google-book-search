@@ -14,7 +14,7 @@ module.exports = {
     },
 
     findAll: (req,res) => {
-      console.log("find all");
+      
         db.Book
           .find({})
           .sort({author:1})
@@ -31,7 +31,7 @@ module.exports = {
     },
 
     create: (req,res) =>{
-      console.log("create book",req.body)
+      
         db.Book
           .create(req.body)
           .then(dbModel => res.status(200).json(dbModel))

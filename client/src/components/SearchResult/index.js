@@ -19,7 +19,10 @@ function SearchResult(props) {
                                 <div className="col-md-4">
                                     <h5 className="card-title">{book.volumeInfo.title}</h5>
                                     <p className="card-text"><small className="text-muted">{book.volumeInfo.authors}</small></p>
-                                    <img src={book.volumeInfo.imageLinks.smallThumbnail} className="card-img" alt="book image" />
+                                    <img src={book.volumeInfo.imageLinks?
+                                               book.volumeInfo.imageLinks.smallThumbnail:
+                                               ""}
+                                         className="card-img" alt="book image" />
                                    
                                 </div>
                                 <div className="col-md-8">
@@ -34,9 +37,15 @@ function SearchResult(props) {
                                     
                                         <button  onClick={props.handleSaveBooks} 
                                                 title={book.volumeInfo.title} authors={book.volumeInfo.authors}
-                                                image={book.volumeInfo.imageLinks.smallThumbnail}
+                                                image={book.volumeInfo.imageLinks?
+                                                        book.volumeInfo.imageLinks.smallThumbnail:
+                                                        ""}
                                                 link={book.volumeInfo.previewLink}
                                                 description={book.volumeInfo.description}
+                                                disabled=
+                                                {props.saveSuccess ?
+                                                   true:
+                                                    false}
                                                 >Save</button>
                                     </div>
                                 </div>

@@ -2,24 +2,21 @@
   text-align: center;
 }
 
-.App-logo{
-  animation: App-logo-spin infinite 20s ease-in-out;
-  height: 5vmin;
-  pointer-events: none;
-}
 
 
-.card-body{
-  background:lightgray;
-  border:0.5rem
+
+.card{
+  background:lemonchiffon;
+  border:0.5rem;
+  padding:5px;
 }
 
 
 button {
-background: rgb(114, 101, 196);
+background:lightgray;
 border: 1px solid lightslategray;
 border-radius: 5px;
-color:darkmagenta;
+color:rgb(30, 0, 139);
 display: inline-block;
 font-size: 0.8em;
 font-weight: bold;
@@ -29,10 +26,15 @@ position: relative;
 text-transform: uppercase;
 
 }
-
+a{
+  color:rgb(30, 0, 139);
+}
+a:hover{
+ color:darksalmon;
+}
 
 button:hover {
-color: #2ecc71;
+color:darksalmon;
 }
 
 .card-img {
@@ -54,11 +56,9 @@ p{
 color:blue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
