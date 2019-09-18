@@ -44,6 +44,7 @@ class Searchbooks extends Component{
                 error: "Please input a valid book name!"
             })
         } else {
+            console.log("this book name",this.state.bookname);
             API.getGoogleBooks(this.state.bookname)
                 .then(res => {
 

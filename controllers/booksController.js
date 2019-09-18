@@ -10,7 +10,11 @@ module.exports = {
       axios
           .get("https://www.googleapis.com/books/v1/volumes?q="+req.params.title)
           .then(response=>res.json(response.data.items))
-          .catch(err => console.log(err));
+          .catch(err => { console.log(err)
+                           res.json({
+                             msg:err,
+                             url:"https://www.googleapis.com/books/v1/volumes?q="+req.params.title
+                           })});
     },
 
     findAll: (req,res) => {

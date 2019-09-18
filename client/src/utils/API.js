@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
 
     getGoogleBooks: (title) =>{
-        
+       console.log("in API, title",title);
        return axios.get("/api/books/googlebooks/"+title);
             
     },
