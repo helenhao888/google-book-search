@@ -33,7 +33,7 @@ function SearchResult(props) {
                                                     "No description"
                                                  }
                                                </p>
-                                        <button><a href={book.volumeInfo.previewLink} target="_blank">View</a></button>
+                                        <button><a href={book.volumeInfo.previewLink} target="_blank"  rel="noopener noreferrer" >View</a></button>
                                     
                                         <button  onClick={props.handleSaveBooks} 
                                                 title={book.volumeInfo.title} authors={book.volumeInfo.authors}
