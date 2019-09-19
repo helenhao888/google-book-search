@@ -35,19 +35,19 @@ https://github.com/helenhao888/google-book-search.git
 
 ### Screenshots
 1. Search Book  
-   ![search book](public/search.png)
+   ![search book](client/public/search.png)
 2. View book
     
-   ![view book](public/viewBook.png)
+   ![view book](client/public/viewBook.png)
 
 3.  Save book and View Saved Book     
    * save a book
-   ![save book](public/saveBook.png)
+   ![save book](client/public/saveBook.png)
    * view saved book
-   ![view saved book](public/savedBook.png)
+   ![view saved book](client/public/savedBook.png)
 
 4.   Delete Book
-   ![delete book](public/deleteBook.png)
+   ![delete book](client/public/deleteBook.png)
 
 
 
