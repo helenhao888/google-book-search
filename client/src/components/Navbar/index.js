@@ -9,15 +9,15 @@ function Navbar() {
   return (
                      
    
-      <nav class="navbar navbar-expand-lg  sticky-top">
+      <nav className="navbar navbar-expand-lg  sticky-top">
 
           <Link className="navbar-brand" to="/">
               Google Books
           </Link>
 
          
-          <div class="navbar" >
-              <div class="navbar-nav">
+          <div className="navbar" >
+              <div className="navbar-nav">
                   <Link className="nav-item" to="/search">
                       <i className="fa fa-search" aria-hidden="true">  Search</i>
                   </Link>
