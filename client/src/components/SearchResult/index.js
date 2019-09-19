@@ -10,7 +10,7 @@ function SearchResult(props) {
         <div className="container-fluid resultContainer">
             <List>
                 <h4>Results</h4>
-                {props.result}
+             
                 {props.result.map((book, index) => (
                    book.volumeInfo.title && book.volumeInfo.title ?                   
                    (<ListItem key={index}>
