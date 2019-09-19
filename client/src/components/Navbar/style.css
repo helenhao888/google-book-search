@@ -9,6 +9,14 @@ nav{
 
 
 
-span{
-    display:list-item;
+.logo{
+    color:darkmagenta;
+    font-size:32px;
+    font-weight: 900;
 }    
+
+i{
+    font-size:28px;
+}
+
+

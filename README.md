@@ -35,6 +35,9 @@ https://github.com/helenhao888/google-book-search.git
 
 ### Screenshots
 1. Search Book  
+   * Loading Result
+   ![search book](client/public/searchLoading.png)
+   * Get searched books
    ![search book](client/public/search.png)
 2. View book
     

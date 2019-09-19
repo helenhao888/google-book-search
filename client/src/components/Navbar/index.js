@@ -12,7 +12,7 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg  sticky-top">
 
           <Link className="navbar-brand" to="/">
-              Google Books
+              <div className="logo">Google Books</div>
           </Link>
 
          
