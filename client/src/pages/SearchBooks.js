@@ -33,7 +33,7 @@ class Searchbooks extends Component{
             errorflag: false,
             error: "",
             displayflag:false,
-            result:"",
+            result:[],
             saveSuccess:false
         });
         this.setState({ loadingflag: true });
@@ -48,11 +48,13 @@ class Searchbooks extends Component{
             API.getGoogleBooks(this.state.bookname)
                 .then(res => {
 
+                    console.log("res data from google",res.data);
                     this.setState({
                         result: res.data,
                         loadingflag: false,
                         displayflag: true
                     });
+                    console.log("this state result",this.state.result);
 
                 })
                 .catch(err => {
